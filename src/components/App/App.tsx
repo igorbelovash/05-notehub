@@ -28,6 +28,7 @@ function App() {
 
   const handleSearch = useDebouncedCallback((search: string) => {
     setSearch(search);
+    setCurrentPage(1);
   }, 1000);
 
   const handleDelete = (id: string) => {
