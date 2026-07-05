@@ -1,16 +1,16 @@
 import css from "./App.module.css";
-import NoteList from "./components/NoteList/NoteList.tsx";
-import Pagination from "./components/Pagination/Pagination.tsx";
-import SearchBox from "./components/SearchBox/SearchBox.tsx";
-import Modal from "./components/Modal/Modal.tsx";
-import NoteForm from "./components/NoteForm/NoteForm.tsx";
-import type { CreateNote } from "./types/note.ts";
-import { fetchNotes } from "./services/noteService.ts";
+import NoteList from "../NoteList/NoteList.tsx";
+import Pagination from "../Pagination/Pagination.tsx";
+import SearchBox from "../SearchBox/SearchBox.tsx";
+import Modal from "../Modal/Modal.tsx";
+import NoteForm from "../NoteForm/NoteForm.tsx";
+import type { CreateNote } from "../../types/note.ts";
+import { fetchNotes } from "../../services/noteService.ts";
 import { useState } from "react";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { useDebouncedCallback } from "use-debounce";
-import { useModalControl } from "./hooks/useModalControl.ts";
-import { useNotesMutations } from "./hooks/useNotesMutations.ts";
+import { useModalControl } from "../../hooks/useModalControl.ts";
+import { useNotesMutations } from "../../hooks/useNotesMutations.ts";
 
 function App() {
   const [search, setSearch] = useState<string | undefined>(undefined);
